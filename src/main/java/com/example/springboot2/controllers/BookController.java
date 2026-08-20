@@ -1,7 +1,7 @@
-package com.example.springBoot2.controllers;
+package com.example.springboot2.controllers;
 
-import com.example.springBoot2.models.Book;
-import com.example.springBoot2.repositories.BookRepository;
+import com.example.springboot2.models.Book;
+import com.example.springboot2.repositories.BookRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

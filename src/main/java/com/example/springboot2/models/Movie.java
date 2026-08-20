@@ -1,4 +1,4 @@
-package com.example.springBoot2.models;
+package com.example.springboot2.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,24 +6,24 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Album {
+public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
     private int year;
-    private String artist;
-    private int tracks;
+    private String director;
+    private int runtime;
 
-    public Album() {
+    public Movie() {
     }
 
-    public Album(String name, String artist, int year, int tracks) {
+    public Movie(String name, String director, int year, int duration) {
         this.name = name;
         this.year = year;
-        this.artist = artist;
-        this.tracks = tracks;
+        this.director = director;
+        this.runtime = duration;
     }
 
     public int getId() {
@@ -50,19 +50,19 @@ public class Album {
         this.year = year;
     }
 
-    public String getArtist() {
-        return artist;
+    public String getDirector() {
+        return director;
     }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
-    public int getTracks() {
-        return tracks;
+    public int getRuntime() {
+        return runtime;
     }
 
-    public void setTracks(int tracks) {
-        this.tracks = tracks;
+    public void setRuntime(int runtime) {
+        this.runtime = runtime;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.springBoot2.models;
+package com.example.springboot2.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,24 +6,24 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Book {
+public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
     private int year;
-    private String author;
-    private int pages;
+    private String artist;
+    private int tracks;
 
-    public Book() {
+    public Album() {
     }
 
-    public Book(String name, String author, int year, int pages) {
+    public Album(String name, String artist, int year, int tracks) {
         this.name = name;
         this.year = year;
-        this.author = author;
-        this.pages = pages;
+        this.artist = artist;
+        this.tracks = tracks;
     }
 
     public int getId() {
@@ -50,19 +50,19 @@ public class Book {
         this.year = year;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
-    public int getPages() {
-        return pages;
+    public int getTracks() {
+        return tracks;
     }
 
-    public void setPages(int pages) {
-        this.pages = pages;
+    public void setTracks(int tracks) {
+        this.tracks = tracks;
     }
 }

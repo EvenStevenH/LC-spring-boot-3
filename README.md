@@ -93,9 +93,9 @@ should extend the `JpaRepository` interface, and should be parameterized with th
 the `id` member of the `Book` model class (which is `Integer`.)
 
 ```java
-package com.example.springBoot2.repositories;
+package com.example.springboot2.repositories;
 
-import com.example.springBoot2.models.Book;
+import com.example.springboot2.models.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
@@ -122,22 +122,19 @@ For ALL of the controllers, we will be making the following changes:
 Example for the `BookController`:
 
 ```java
-package com.example.springBoot2.controllers;
+package com.example.springboot2.controllers;
 
-import com.example.springBoot2.models.Book;
-import com.example.springBoot2.repositories.BookRepository;
+import com.example.springboot2.repositories.BookRepository;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/books")
 public class BookController {
-    private final BookRepository bookRepository;
+   private final BookRepository bookRepository;
 
-    public BookController(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
+   public BookController(BookRepository bookRepository) {
+      this.bookRepository = bookRepository;
+   }
 }
 
 ```
